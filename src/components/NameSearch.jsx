@@ -15,7 +15,7 @@ function NameSearch(){
 
     const searchResults = response.map((recipe, index) => {
         return(
-            <h6 key={index}>{recipe.title}</h6>
+            <h6 className='results' key={index}>{recipe.title}</h6>
         )
     })
 
@@ -23,7 +23,7 @@ function NameSearch(){
         <div className='container'>
             <h2 className='heading'>Search By Name</h2>
             <input className='input' placeholder='Search Recipes' onChange={(e) => setQuery(e.target.value)}/>
-            <div className='results'>{searchResults}</div>
+            <div >{searchResults}</div>
         </div>
     )
 }

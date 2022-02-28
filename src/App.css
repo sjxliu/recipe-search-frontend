@@ -8,12 +8,15 @@
 }
 
 .navbar {
-  display: "flex";
-  justify-content: "center";
+  display: flex;
+  justify-content: center;
 }
 
 .log-sign-in {
   font-size: 30px;
+  position: absolute;
+  top: 1vw;
+  right: 2vw;
 }
 
 .home-btn {
