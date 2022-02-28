@@ -4,9 +4,10 @@ import "./styles/home.css"
 function Home(){
     return(
     <div className='home-container'>
-            <h3 className='greeting'>Welcome to our recipe search/save website. Here's a description of what we can do for you...</h3>
-            <div style={{display: 'flex', justifyContent: 'center'}}>
-                <Link to='/nameSearch'><button>Search a recipe by name</button></Link>
+            <h3 className='greeting'>Welcome to the Recipeantor!</h3>
+            <p className='desc'>Find fullfiling and new recipes</p>
+            <div className='to-app' style={{display: 'flex', justifyContent: 'center'}}>
+                <Link className='button' to='/nameSearch'><button>Search a recipe by name</button></Link>
             </div>
         </div>
     )
