@@ -10,19 +10,64 @@
   background-color: rgb(180, 206, 255);
 }
 
-.home-container{
-    border: 5px dotted red;
-    border-radius: 20px;
-    padding: 30px;
-    margin: 30px;
-    background-color: rgb(180, 206, 255);
+.home-container {
+  border: 5px dotted red; 
+  border-radius: 20px;
+  padding: 30px;
+  margin: 30px;
+  background-color: rgb(180, 206, 255);
+  min-height: 100%;
+  height: 100%;
+  height: auto;
 }
 
-.greeting{font-size: 5rem;}
-.desc{
-    font-size: 2rem;
+.greeting {
+  font-size: 5rem;
+}
+.desc {
+  font-size: 2rem;
 }
 
-.to-app{}
+.to-app {
+  display: "flex";
+  justify-content: "center";
+}
 
-.button{}
+button {
+  width: 140px;
+  height: 45px;
+  font-size: 30px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: white;
+  font-weight: 700;
+  position: relative;
+  transition: all 0.5s;
+  z-index: 1;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background-color: white;
+  z-index: -1;
+  transition: all 0.5s;
+}
+
+button:hover::before {
+  width: 100%;
+}
+
+button:hover {
+  color: black;
+}
+
+button:active:before {
+  background: #b9b9b9;
+}
