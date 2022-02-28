@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react'
+import "./styles/name-search.css"
 
 function NameSearch(){
     let [response, updateRes] = useState([])
@@ -20,9 +21,9 @@ function NameSearch(){
 
     return (
         <div>
-            <h2>Search By Name</h2>
-            <input onChange={(e) => setQuery(e.target.value)}/>
-            <div>{searchResults}</div>
+            <h2 className='heading'>Search By Name</h2>
+            <input className='input' placeholder='Search Recipes' onChange={(e) => setQuery(e.target.value)}/>
+            <div className='results'>{searchResults}</div>
         </div>
     )
 }

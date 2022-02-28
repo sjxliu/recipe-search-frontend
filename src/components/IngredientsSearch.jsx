@@ -1,5 +1,6 @@
 import {useState} from 'react'
 import IngredientBar from './IngredientBar'
+import "./styles/ingredients-search.css"
 
 function IngredientsSearch() {
     let [ingredients, setIngredients] = useState([])
