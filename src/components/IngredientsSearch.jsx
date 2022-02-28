@@ -1,5 +1,6 @@
 import {useState} from 'react'
 import IngredientBar from './IngredientBar'
+import "./styles/ingredients-search.css"
 
 function IngredientsSearch() {
     let [ingredients, setIngredients] = useState([])
@@ -21,15 +22,15 @@ function IngredientsSearch() {
     const searchElems = searchBars.map((num, index) => {
         if(index !== searchBars.length - 1){
             return (
-                <div key={index}>
+                <div className='add-ingred' key={index}>
                     <IngredientBar addIngredient={addIngredient} id={index} />
                 </div>
             )
         } else {
             return (
-                <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', paddingLeft: '21px', width: '278px', margin:'auto', height: '24px'}} key={index}>
+                <div className='testing' key={index}>
                     <IngredientBar addIngredient={addIngredient} id={index}/>
-                    <span style={{alignSelf: 'start', marginLeft: '10px'}} onClick={() => setBars([...searchBars, searchBars.length])}>+</span>
+                    <span className='add-ingred'  onClick={() => setBars([...searchBars, searchBars.length])}>Add Ingredient</span>
                 </div>
             )
         }
@@ -40,8 +41,8 @@ function IngredientsSearch() {
     return(
         <div>
             {searchElems}
-            <button onClick={() => searchForRecipe()}>Search</button>
-            <div>{searchResults ? searchResults : null}</div>
+            <button className='search-btn' onClick={() => searchForRecipe()}>Search</button>
+            <div className='results'>{searchResults ? searchResults : null}</div>
         </div>
     )
 }

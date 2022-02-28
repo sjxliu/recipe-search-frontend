@@ -17,8 +17,8 @@ function App() {
   
   return (
     <div className="App">
-      <h1>What's To Eat?</h1>
-      <span onClick={() => setVis('initial')} style={{position: 'absolute', top: '1vw', right: '2vw'}}>Log In/Sign In</span>
+      <h1 className='title'>What's To Eat?</h1>
+      <span className='log-sign-in' onClick={() => setVis('initial')} style={{position: 'absolute', top: '1vw', right: '2vw'}}>Log In/Sign In</span>
       <div style={{display: 'flex', justifyContent: 'center'}} className='navbar'>
         <span><Link to='/'>Home</Link></span>
         <span><Link to='/nameSearch'>Search By Name</Link></span>
