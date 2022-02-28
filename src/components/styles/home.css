@@ -7,8 +7,22 @@
   text-decoration: none;
   list-style-type: none;
   outline: none;
+  background-color: rgb(180, 206, 255);
 }
 
 .home-container{
-    font-size: 5rem;
+    border: 5px dotted red;
+    border-radius: 20px;
+    padding: 30px;
+    margin: 30px;
+    background-color: rgb(180, 206, 255);
 }
+
+.greeting{font-size: 5rem;}
+.desc{
+    font-size: 2rem;
+}
+
+.to-app{}
+
+.button{}
