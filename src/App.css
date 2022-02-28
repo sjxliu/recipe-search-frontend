@@ -1,8 +1,40 @@
 .App {
+  margin-top: 15px;
   text-align: center;
 }
 
-.navbar > * {
-  width: 300px;
-  margin: 10px auto;
+.title {
+  font-size: 5rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+}
+
+.log-sign-in {
+  font-size: 30px;
+  position: absolute;
+  top: 1vw;
+  right: 2vw;
+}
+
+.home-btn {
+  font-size: 30px;
+  margin: 25px 25px 25px 25px;
+}
+
+.name-search-btn {
+  font-size: 30px;
+  margin: 25px 25px 25px 25px;
+}
+
+.i-search-btn {
+  font-size: 30px;
+  margin: 25px 25px 25px 25px;
+}
+
+.sum-btn {
+  font-size: 30px;
+  margin: 25px 25px 25px 25px;
 }

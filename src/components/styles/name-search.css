@@ -7,7 +7,12 @@
   text-decoration: none;
   list-style-type: none;
   outline: none;
-  background-color: rgb(180, 206, 255);
+  background-color: rgb(180, 206, 255);background-image: url("./images/pexels-martin-péchy-304664.jpg");
+}
+
+.container{
+    padding: auto;
+    margin: auto;
 }
 
 .heading {
@@ -30,11 +35,12 @@ color: slateblue;
 	height: 80px;
 	border: 1px solid darken(white, 30%);
 	border-radius: 20px 0 0 20px;
+    background-color: rgb(203, 199, 255);
 }
 
 .results {
-    font-size: 3rem;
+    font-size: 3em;
   justify-content: space-between;
   align-content: space-between;
-  flex-wrap: nowrap;
+  /* flex-wrap: nowrap; */
 }

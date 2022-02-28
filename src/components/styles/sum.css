@@ -8,6 +8,7 @@
   list-style-type: none;
   outline: none;
   background-color: rgb(180, 206, 255);
+  background-image: url("./images/pexels-martin-péchy-304664.jpg");
 }
 
 .page-container {
@@ -16,9 +17,11 @@
 }
 
 .heading {
+  margin-bottom: 15px;
 }
 
 .input {
+  background-color: rgb(203, 199, 255);
 }
 
 .id {

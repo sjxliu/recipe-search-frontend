@@ -8,13 +8,12 @@
   list-style-type: none;
   outline: none;
   background-color: rgb(180, 206, 255);
+  background-image: url("./images/pexels-martin-péchy-304664.jpg");
 }
 
 .suggestions {
   padding: 4px 0;
-
   border: 1px solid black;
-
   border-top: 10px;
   font-size: 1.5rem;
   width: 255px;
