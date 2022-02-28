@@ -26,17 +26,25 @@ function App() {
         Log In/Sign In
       </span>
       <div className="navbar">
-        <span className="home-btn">
-          <Link to="/">Home</Link>
+        <span>
+          <Link className="home-btns" to="/">
+            Home
+          </Link>
         </span>
-        <span className="name-search-btn">
-          <Link to="/nameSearch">Search By Name</Link>
+        <span>
+          <Link className="home-btns" to="/nameSearch">
+            Search By Name
+          </Link>
         </span>
-        <span className="i-search-btn">
-          <Link to="/ingredientSearch">Search By Ingredients</Link>
+        <span>
+          <Link className="home-btns" to="/ingredientSearch">
+            Search By Ingredients
+          </Link>
         </span>
-        <span className="sum-btn">
-          <Link to="/recipeSummary">Get Summary Of Recipe</Link>
+        <span>
+          <Link className="home-btns" to="/recipeSummary">
+            Get Summary Of Recipe
+          </Link>
         </span>
       </div>
       <hr />

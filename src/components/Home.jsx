@@ -11,6 +11,11 @@ function Home() {
           <button>Search Recipes</button>
         </Link>
       </div>
+      <p className="credit">
+        Background by:{" "}
+        <a href="https://www.pexels.com/@martinpechy"> Martin Péchy</a> from{" "}
+        <a href="https://www.pexels.com/">Pexels</a>
+      </p>
     </div>
   );
 }
