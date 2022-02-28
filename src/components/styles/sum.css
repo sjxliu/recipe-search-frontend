@@ -1,0 +1,26 @@
+.page-container {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.heading {
+  margin-bottom: 15px;
+}
+
+.input {
+  background-color: rgb(203, 199, 255);
+}
+
+.id {
+  font-size: 25px;
+}
+
+.recipe-name {
+  font-size: 2.5rem;
+  margin-top: 30px;
+}
+
+.results {
+  font-size: 2rem;
+  margin-top: 30px;
+}

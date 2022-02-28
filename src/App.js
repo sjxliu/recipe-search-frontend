@@ -1,7 +1,7 @@
-import './App.css';
+import "./App.css";
 
-import {Routes, Route, Link} from 'react-router-dom'
-import {useState} from 'react'
+import { Routes, Route, Link } from "react-router-dom";
+import { useState } from "react";
 
 import NameSearch from './components/NameSearch';
 import Home from './components/Home';
@@ -106,13 +106,13 @@ function App() {
       <div style={{...upperButtonsStyles, display: profileButtonVis}}>
         <span><Link to='/profile'>Profile</Link></span>
       </div>
-      <div style={{display: 'flex', justifyContent: 'center'}} className='navbar'>
-        <span><Link to='/'>Home</Link></span>
-        <span><Link to='/nameSearch'>Search By Name</Link></span>
-        <span><Link to='/ingredientSearch'>Search By Ingredients</Link></span>
-        <span><Link to='/recipeSummary'>Get Summary Of Recipe</Link></span>
+      <div className='navbar'>
+        <span><Link className="home-btns" to='/'>Home</Link></span>
+        <span><Link className="home-btns" to='/nameSearch'>Search By Name</Link></span>
+        <span><Link className="home-btns" to='/ingredientSearch'>Search By Ingredients</Link></span>
+        <span><Link className="home-btns" to='/recipeSummary'>Get Summary Of Recipe</Link></span>
       </div>
-      <hr/>
+      <hr />
 
       <div className='loginWindow' style={{...winStyles, display: loginVis}}>
         <h1>Login</h1>
