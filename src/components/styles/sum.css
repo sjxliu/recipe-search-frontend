@@ -9,3 +9,28 @@
   outline: none;
   background-color: rgb(180, 206, 255);
 }
+
+.page-container {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.heading {
+}
+
+.input {
+}
+
+.id {
+  font-size: 25px;
+}
+
+.recipe-name {
+  font-size: 2.5rem;
+  margin-top: 30px;
+}
+
+.results {
+  font-size: 2rem;
+  margin-top: 30px;
+}

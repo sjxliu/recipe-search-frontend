@@ -11,6 +11,7 @@
 }
 
 .heading {
+    margin-top: 1em;
   font-size: 3rem;
   justify-content: space-between;
 }

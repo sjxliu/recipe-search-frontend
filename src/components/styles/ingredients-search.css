@@ -13,9 +13,12 @@
 .search-container{
     position: relative;
     align-items: center;
-    display: list-item;}
+    display: list-item;
+margin-top: 1em;
+}
 
 .add-ingred {
+    margin-top: .5em;
   position: relative;
   font-size: 17px;
   text-transform: uppercase;
@@ -73,6 +76,9 @@
   height: "24px";
 } */
 
+.search-btn{
+    margin-top: .5em;
+}
 
 .results {
   font-size: 3rem;
