@@ -1,5 +1,4 @@
 import {useState, useEffect} from 'react'
-import "./styles/sum.css"
 
 function RecipeSummary() {
     let [input, updateInput] = useState(1)

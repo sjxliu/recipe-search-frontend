@@ -10,7 +10,7 @@ function Home() {
         className="to-app"
       >
         <Link className="button" to="/nameSearch">
-          <button>Search Recipes</button>
+          <button className="search-button">Search Recipes</button>
         </Link>
       </div>
     </div>

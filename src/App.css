@@ -1,8 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@700&display=swap");
+
+* {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  outline: none;
+  background-color: rgb(180, 206, 255);
+}
+
+a {
+  color: darkblue
+}
+
 .App {
   text-align: center;
+}
+
+.title {
+  margin: 10px auto
 }
 
 .navbar > * {
   width: 300px;
   margin: 10px auto;
+}
+
+.loginWindow h1 {
+  font-size: 3rem;
+  width: 50%;
+  margin: 2vh auto;
+}
+
+.loginWindow label {
+  font-size: 1.5rem;
+}
+
+.loginWindow input:not([type = 'submit']){
+  width: 40%;
+  height: 20px;
+  font-size: 1.5rem;
+  padding: 5px
+}
+
+.loginWindow [type = 'submit']{
+  width: 25%;
+  height: 25px;
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+
+.loginWindow [type = 'submit']:hover {
+  cursor: pointer;
+}
+
+.loginWindow button {
+  width: 25%;
+  font-size: 1.2rem;
+  margin-left: 10px;
+}
+
+.loginWindow button:hover {
+  cursor: pointer;
+}
+
+.login-buttons > *:hover {
+  cursor: pointer;
+}
+
+.login-message {
+  font-size: 1.3rem;
+  color: red
 }
