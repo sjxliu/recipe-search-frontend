@@ -39,7 +39,7 @@ function IngredientsSearch() {
     const searchResults = results.map((res, index) => <p key={index}>{res.title}</p>)
 
     return(
-        <div>
+        <div className='search-container'>
             {searchElems}
             <button className='search-btn' onClick={() => searchForRecipe()}>Search</button>
             <div className='results'>{searchResults ? searchResults : null}</div>
