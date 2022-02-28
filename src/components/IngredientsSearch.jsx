@@ -36,7 +36,7 @@ function IngredientsSearch() {
         }
     })
 
-    const searchResults = results.map((res, index) => <p key={index}>{res.title}</p>)
+    const searchResults = results.map((res, index) => <p key={index}>{res.title} </p>)
 
     return(
         <div className='search-container'>
