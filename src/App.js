@@ -19,11 +19,11 @@ function App() {
     <div className="App">
       <h1 className='title'>What's To Eat?</h1>
       <span className='log-sign-in' onClick={() => setVis('initial')} style={{position: 'absolute', top: '1vw', right: '2vw'}}>Log In/Sign In</span>
-      <div style={{display: 'flex', justifyContent: 'center'}} className='navbar'>
-        <span><Link to='/'>Home</Link></span>
-        <span><Link to='/nameSearch'>Search By Name</Link></span>
-        <span><Link to='/ingredientSearch'>Search By Ingredients</Link></span>
-        <span><Link to='/recipeSummary'>Get Summary Of Recipe</Link></span>
+      <div  className='navbar'>
+        <span className='home-btn'><Link to='/'>Home</Link></span>
+        <span className='name-search-btn'><Link to='/nameSearch'>Search By Name</Link></span>
+        <span className='i-search-btn'><Link to='/ingredientSearch'>Search By Ingredients</Link></span>
+        <span className='sum-btn'><Link to='/recipeSummary'>Get Summary Of Recipe</Link></span>
       </div>
       <hr/>
 

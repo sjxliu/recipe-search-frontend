@@ -20,7 +20,7 @@ function NameSearch(){
     })
 
     return (
-        <div>
+        <div className='container'>
             <h2 className='heading'>Search By Name</h2>
             <input className='input' placeholder='Search Recipes' onChange={(e) => setQuery(e.target.value)}/>
             <div className='results'>{searchResults}</div>
