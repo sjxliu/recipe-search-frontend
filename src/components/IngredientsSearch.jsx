@@ -26,8 +26,12 @@ function IngredientsSearch() {
   const searchElems = searchBars.map((num, index) => {
     if (index !== searchBars.length - 1) {
       return (
-        <div className="add-ingred" key={index}>
-          <IngredientBar addIngredient={addIngredient} id={index} />
+        <div key={index}>
+          <IngredientBar
+            className="add-ingred"
+            addIngredient={addIngredient}
+            id={index}
+          />
         </div>
       );
     } else {
