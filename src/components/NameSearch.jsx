@@ -11,6 +11,8 @@ function NameSearch(props){
             fetch(`https://api.spoonacular.com/recipes/complexSearch?query=${query}&apiKey=${process.env.REACT_APP_API_KEY}`)
             .then(res => res.json())
             .then(res => updateRes(res.results))
+        } else {
+            updateRes([])
         }
       }, [query])
 

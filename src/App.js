@@ -128,6 +128,7 @@ function App() {
             <button onClick={() => {
               updateLoginUser('')
               updateLoginPass('')
+              setMessage('')
               setLoginVis('none')
               }}>Close</button>
           </div>
@@ -150,6 +151,7 @@ function App() {
             <button onClick={() => {
               updateSignUpUser('')
               updateSignUpPass('')
+              setMessage('')
               setSignUpVis('none')
               }}>Close</button>
           </div>
