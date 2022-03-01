@@ -1,8 +1,9 @@
 import { useState } from "react";
 import IngredientBar from "./IngredientBar";
 import "./styles/ingredients-search.css";
+import RecipeCard from "./RecipeCard";
 
-function IngredientsSearch() {
+function IngredientsSearch(props) {
   let [ingredients, setIngredients] = useState([]);
   let [searchBars, setBars] = useState([0]);
   let [results, updateResults] = useState([]);
@@ -13,11 +14,7 @@ function IngredientsSearch() {
 
   const searchForRecipe = () => {
     if (ingredients) {
-      fetch(
-        `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${ingredients.join(
-          ","
-        )}&apiKey=${process.env.REACT_APP_API_KEY}`
-      )
+      fetch(`https://api.spoonacular.com/recipes/findByIngredients?ingredients=${ingredients.join(",")}&apiKey=${process.env.REACT_APP_API_KEY}`)
         .then((res) => res.json())
         .then((res) => updateResults(res));
     }
@@ -45,9 +42,11 @@ function IngredientsSearch() {
     }
   });
 
-  const searchResults = results.map((res, index) => (
-    <p key={index}>{res.title} </p>
-  ));
+  const searchResults = results.map((res, index) => {
+    return(
+      <RecipeCard id={res.id} key={index} add='true' userId={props.userId} name={props.name} used={res.usedIngredientCount}/>
+    )
+  });
 
   return (
     <div className="search-container">

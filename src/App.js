@@ -6,7 +6,6 @@ import { useState } from "react";
 import NameSearch from './components/NameSearch';
 import Home from './components/Home';
 import IngredientsSearch from './components/IngredientsSearch';
-import RecipeSummary from './components/RecipeSummary';
 import Profile from './components/Profile';
 
 function App() {
@@ -110,7 +109,6 @@ function App() {
         <span><Link className="home-btns" to='/'>Home</Link></span>
         <span><Link className="home-btns" to='/nameSearch'>Search By Name</Link></span>
         <span><Link className="home-btns" to='/ingredientSearch'>Search By Ingredients</Link></span>
-        <span><Link className="home-btns" to='/recipeSummary'>Get Summary Of Recipe</Link></span>
       </div>
       <hr />
 
@@ -160,9 +158,8 @@ function App() {
 
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/nameSearch' element={<NameSearch />} />
-        <Route path='/ingredientSearch' element={<IngredientsSearch />} />
-        <Route path='/recipeSummary' element={<RecipeSummary />} />
+        <Route path='/nameSearch' element={<NameSearch userId={user.id} name={user.username}/>} />
+        <Route path='/ingredientSearch' element={<IngredientsSearch userId={user.id} name={user.username}/>} />
         <Route path='/profile' element={<Profile account={user}/>} />
       </Routes>
     </div>

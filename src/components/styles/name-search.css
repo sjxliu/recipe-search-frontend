@@ -32,3 +32,12 @@ color: slateblue;
   align-content: space-between;
   /* flex-wrap: nowrap; */
 }
+
+.search-results {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}

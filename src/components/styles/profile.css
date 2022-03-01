@@ -1,0 +1,7 @@
+.favorites {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
