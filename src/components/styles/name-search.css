@@ -30,7 +30,7 @@ color: slateblue;
     font-size: 3em;
   justify-content: space-between;
   align-content: space-between;
-  /* flex-wrap: nowrap; */
+
 }
 
 .search-results {
