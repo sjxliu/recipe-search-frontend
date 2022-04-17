@@ -1,0 +1,122 @@
+@import "https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@700&display=swap";
+
+$font: "Yanone Kaffeesatz", sans-serif;
+$primary-color: #00aeff;
+$secondary-color: darkblue;
+$background-img: url("./components/styles/images/pexels-martin-péchy-304664.jpg");
+$font-size: 1.5rem;
+
+* {
+  font-family: $font;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: 0;
+  outline: 0;
+}
+
+a {
+  color: $secondary-color;
+}
+
+.App {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.title {
+  font-size: 5rem;
+  margin: 10px auto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar > {
+  * {
+    width: 300px;
+    margin: 10px auto;
+  }
+}
+
+.loginWindow {
+  h1 {
+    font-size: 3rem;
+    width: 50%;
+    margin: 2vh auto;
+  }
+
+  label {
+    font-size: $font-size;
+  }
+
+  input:not([type="submit"]) {
+    width: 40%;
+    height: 20px;
+    font-size: $font-size;
+    padding: 5px;
+  }
+
+  [type="submit"] {
+    width: 25%;
+    height: 25px;
+    font-size: $font-size;
+    margin-right: 10px;
+  }
+
+  [type = 'submit']:hover {
+    cursor: pointer;
+  }
+
+  button {
+    width: 25%;
+    font-size: $font-size;
+    margin-left: 10px;
+  }
+
+  button:hover {
+    cursor: pointer;
+  }
+}
+
+.login-message{
+    font-size: $font-size;
+    color: red;
+}
+
+.log-sign-in {
+    font-size: 30px;
+    position: absolute;
+    top: 1vw;
+    right: 2vw;
+  }
+
+.home-btns {
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    margin: 25px 25px 25px 25px;
+    padding: 15px 30px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: $primary-color;
+    background: transparent;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border-radius: 30px;
+    border: 2px solid $primary-color;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 $primary-color;
+
+    :hover {
+        color: white;
+        box-shadow: inset 0 -100px 0 0 $primary-color
+    }
+
+    :active{
+        transform: scale(0.9);
+    }
+}
