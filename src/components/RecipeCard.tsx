@@ -1,7 +1,18 @@
-import { useEffect, useState } from "react";
+import React from "react";
+import { useEffect, useState, MouseEvent } from "react";
 import './styles/card.css';
 
-function RecipeCard(props){
+function RecipeCard(props: { mongoId: any; userId: any; name: any; id: any; add: any; used: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined; }){
+
+    interface IState {
+        currentBroker: string;
+     }
+     
+     const initialSelectionState: IState  = {
+       currentBroker: "",
+     };
+     
+
     let [data, setData] = useState({})
     let [cardVis, setVis] = useState('initial')
     let [addVis, setAddVis] = useState('initial')
@@ -46,6 +57,15 @@ function RecipeCard(props){
             setAddVis('none')
         }}>+</span>
     )
+    
+    
+type data = {
+    title: string,
+    readyInMinutes: string,
+    image: URL,
+    summary: string,
+}
+
 
     return(
         <div className="card" style={{display: cardVis}}>
