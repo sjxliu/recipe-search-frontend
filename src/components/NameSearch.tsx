@@ -1,8 +1,9 @@
 import {useState, useEffect} from 'react'
 import "./styles/name-search.css"
 import RecipeCard from './RecipeCard';
+import React from 'react';
 
-function NameSearch(props){
+function NameSearch(props:any){
     let [response, updateRes] = useState([])
     let [query, setQuery] = useState('')
 
@@ -16,7 +17,7 @@ function NameSearch(props){
 
     const searchResults = response.map((recipe, index) => {
         return(
-            <RecipeCard id={recipe.id} key={index} add='true' userId={props.userId} name={props.name}/>
+            <RecipeCard id={props.id} key={index} add='true' userId={props.userId} name={props.name} mongoId={undefined} used={undefined}/>
         )
     })
 

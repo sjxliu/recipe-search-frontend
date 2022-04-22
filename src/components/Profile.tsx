@@ -1,20 +1,21 @@
-import { useEffect, useState } from "react"
+import { ReactChild, ReactFragment, ReactPortal, useEffect, useState } from "react"
 import './styles/profile.css';
 
 import RecipeCard from "./RecipeCard";
+import React from "react";
 
-function Profile(props){
+function Profile(props: { account: { id: any; username: boolean | ReactChild | ReactFragment | ReactPortal | null | undefined; }; }){
     let [favorites, setFavorites] = useState([])
 
     useEffect(() => {
         fetch(`https://quiet-plains-41541.herokuapp.com/users/${props.account.id}`)
         .then(res => res.json())
-        .then(res => setFavorites([...favorites, ...res.user.favorites]))
+        .then(res => setFavorites(res.user.favorites))
     }, [])
 
     const favoriteCards = favorites.map((favId, i) => {
         return(
-            <RecipeCard id={favId.recipeId} key={i} mongoId={favId._id}/>
+            <RecipeCard id={props.account.id} key={i} mongoId={favId} userId={undefined} name={undefined} add={undefined} used={undefined}/>
         )
     })
 

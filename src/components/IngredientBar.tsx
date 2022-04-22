@@ -1,7 +1,8 @@
+import React from "react";
 import { useState, useEffect } from "react";
 import "./styles/bar.css";
 
-function IngredientBar(props) {
+function IngredientBar(props: { addIngredient: (arg0: any) => void; }) {
   let [query, setQuery] = useState("");
   let [results, setResults] = useState([]);
 
@@ -19,14 +20,14 @@ function IngredientBar(props) {
 
   const suggestions = results.map((result, index) => (
     <p
-      onClick={(e) => {
-        props.addIngredient(result.name);
-        setQuery(result.name);
+      onClick={(_e) => {
+        props.addIngredient(result);
+        setQuery(result);
       }}
       key={index}
       className="suggestions"
     >
-      {result.name}
+      {result}
     </p>
   ));
 
@@ -39,7 +40,7 @@ function IngredientBar(props) {
       />
       <div
         className="click"
-        onClick={(e) => (e.target.parentNode.style = "display: none")}
+        onClick={(_e) => ('display: none')}
       >
         {suggestions ? suggestions : null}
       </div>

@@ -9,7 +9,15 @@ import IngredientsSearch from "./components/IngredientsSearch";
 import Profile from "./components/Profile";
 import React from "react";
 
-function App() {
+function App(props: {
+  account: {
+    id: any;
+    username:
+      | boolean
+      | null
+      | undefined;
+  };
+}) {
   let [loginVis, setLoginVis] = useState("none");
   let [signUpVis, setSignUpVis] = useState("none");
   let [loginUsername, updateLoginUser] = useState("");
@@ -20,6 +28,16 @@ function App() {
   let [message, setMessage] = useState("");
   let [loginButtonsVis, setLogButtonsVis] = useState("initial");
   let [profileButtonVis, setProfileButtonVis] = useState("none");
+
+  interface userData {
+    id: string;
+    username: string;
+  }
+
+  let userData: userData = {
+    id: "",
+    username: "",
+  };
 
   const loginUser = () => {
     if (loginUsername) {
@@ -47,7 +65,7 @@ function App() {
     }
   };
 
-  const signUpUser = (id: 'string', username: 'string') => {
+  const signUpUser = (_id: "string", _username: "string") => {
     if (signUpUsername) {
       fetch(`https://quiet-plains-41541.herokuapp.com/users`, {
         method: "POST",
@@ -198,7 +216,9 @@ function App() {
         <form
           onSubmit={(e) => {
             e.preventDefault();
-            signUpUser();
+            {
+              signUpUser;
+            }
           }}
         >
           <label htmlFor="username">Username</label>
@@ -232,17 +252,23 @@ function App() {
           </div>
         </form>
       </div>
-      
 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route
           path="/nameSearch"
-          element={<NameSearch userId={user.id} name={user.username} />}
+          element={
+            <NameSearch userId={userData?.id} name={userData?.username} />
+          }
         />
         <Route
           path="/ingredientSearch"
-          element={<IngredientsSearch userId={user.id} name={user.username} />}
+          element={
+            <IngredientsSearch
+              userId={userData?.id}
+              name={userData?.username}
+            />
+          }
         />
         <Route path="/profile" element={<Profile account={user} />} />
       </Routes>
