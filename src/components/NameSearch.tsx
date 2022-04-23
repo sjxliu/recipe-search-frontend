@@ -3,7 +3,7 @@ import "./styles/name-search.css"
 import RecipeCard from './RecipeCard';
 import React from 'react';
 
-function NameSearch(props:any){
+function NameSearch(props:{id:string; key: number; userId:string; name:string;}){
     let [response, updateRes] = useState([])
     let [query, setQuery] = useState('')
 

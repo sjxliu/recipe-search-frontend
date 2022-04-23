@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import "./styles/bar.css";
 
-function IngredientBar(props: { addIngredient: (arg0: any) => void; }) {
+function IngredientBar(props: { addIngredient: (arg0: any) => void; id:number}) {
   let [query, setQuery] = useState("");
   let [results, setResults] = useState([]);
 

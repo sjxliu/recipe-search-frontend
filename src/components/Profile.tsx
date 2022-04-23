@@ -4,7 +4,7 @@ import './styles/profile.css';
 import RecipeCard from "./RecipeCard";
 import React from "react";
 
-function Profile(props: { account: { id: any; username: boolean | ReactChild | ReactFragment | ReactPortal | null | undefined; }; }){
+function Profile(props: { account: { id: string; username: string;}; }){
     let [favorites, setFavorites] = useState([])
 
     useEffect(() => {

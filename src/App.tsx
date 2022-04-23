@@ -17,6 +17,8 @@ function App(props: {
       | null
       | undefined;
   };
+
+  
 }) {
   let [loginVis, setLoginVis] = useState("none");
   let [signUpVis, setSignUpVis] = useState("none");
@@ -216,9 +218,9 @@ function App(props: {
         <form
           onSubmit={(e) => {
             e.preventDefault();
-            {
-              signUpUser;
-            }
+            
+             { signUpUser};
+            
           }}
         >
           <label htmlFor="username">Username</label>
@@ -258,7 +260,7 @@ function App(props: {
         <Route
           path="/nameSearch"
           element={
-            <NameSearch userId={userData?.id} name={userData?.username} />
+            <NameSearch userId={userData?.id} name={userData?.username} key={0} id={""} />
           }
         />
         <Route
@@ -270,7 +272,10 @@ function App(props: {
             />
           }
         />
-        <Route path="/profile" element={<Profile account={user} />} />
+        <Route path="/profile" element={<Profile account={{
+          id: "",
+          username: ""
+        }} {...props.account} />} />
       </Routes>
     </div>
   );

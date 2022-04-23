@@ -4,7 +4,7 @@ import "./styles/ingredients-search.css";
 import RecipeCard from "./RecipeCard";
 import React from "react";
 
-function IngredientsSearch(props: { userId: any; name: any; }) {
+function IngredientsSearch(props: { userId: string; name: string; }) {
   let [ingredients, setIngredients] = useState([]);
   let [searchBars, setBars] = useState([0]);
   let [results, updateResults] = useState([]);
